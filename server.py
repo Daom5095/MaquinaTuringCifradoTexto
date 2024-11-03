@@ -3,7 +3,7 @@ from flask_cors import CORS  # Importa CORS para permitir solicitudes desde dife
 from maquina_turing import MaquinaDeTuring  # Importa la clase MaquinaDeTuring del módulo correspondiente
 
 app = Flask(__name__)  # Crea una instancia de la aplicación Flask
-CORS(app)  # Habilita CORS en todas las rutas para permitir solicitudes de otros orígenes
+CORS(app, resources={r"/*": {"origins": "*"}}) # Habilita CORS en todas las rutas para permitir solicitudes de otros orígenes
 maquina = MaquinaDeTuring(desplazamiento=3)  # Crea una instancia de la máquina de Turing con un desplazamiento de 3
 
 @app.route("/cifrar", methods=["POST"])
