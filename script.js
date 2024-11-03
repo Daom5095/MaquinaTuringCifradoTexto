@@ -7,7 +7,7 @@ async function cifrarTexto() {
     const inputText = document.getElementById("inputText").value;
 
     try {
-        // Realiza una solicitud POST al endpoint "/cifrar" en el servidor
+        // Realiza una solicitud POST al endpoint "/cifrar" en el servidor de Vercel
         const response = await fetch("https://maquina-turing-cifrado-texto.vercel.app/cifrar", {
             method: "POST", // Método HTTP de la solicitud
             headers: {
@@ -42,7 +42,7 @@ async function descifrarTexto() {
     const inputText = document.getElementById("inputText").value;
 
     try {
-        // Realiza una solicitud POST al endpoint "/descifrar" en el servidor
+        // Realiza una solicitud POST al endpoint "/descifrar" en el servidor de Vercel
         const response = await fetch("https://maquina-turing-cifrado-texto.vercel.app/descifrar", {
             method: "POST", // Método HTTP de la solicitud
             headers: {
